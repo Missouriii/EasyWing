@@ -7,6 +7,6 @@ projects:
     iocn: icon.png
     path: "" 
     libs:
-    - src: tpguy825/FormAPI/LibFormAPI
-      version: ^1.3.0
+    - src: jojoe77777/FormAPI/LibFormAPI
+      version: ^1.0.0
 ...
