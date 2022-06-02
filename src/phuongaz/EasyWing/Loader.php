@@ -72,7 +72,7 @@ Class Loader extends PluginBase implements Listener{
 			$this->getScheduler()->scheduleRepeatingTask($wingTask, $tickUpdate);
 			$this->equip_players[$playerName]["task"] = $wingTask;
 			$this->equip_players[$playerName]["name"] = $wing;
-			$player->sendMessage($this->getSetting()->get("turn-on"));			
+			$player->sendMessage("§l§b»§r §aSuccessfully equipped wings");			
 			return;
 		}
 		if($this->equip_players[$playerName]["name"] == $wing){
@@ -82,7 +82,7 @@ Class Loader extends PluginBase implements Listener{
 			$this->getScheduler()->scheduleRepeatingTask($wingTask, $tickUpdate);
 			$this->equip_players[$playerName]["task"] = $wingTask;
 			$this->equip_players[$playerName]["name"] = $wing;
-			$player->sendMessage($this->getSetting()->get("turn-on"));		
+			$player->sendMessage("§l§b»§r §aSuccessfully equipped wings");		
 		}
 	}
 
@@ -91,7 +91,7 @@ Class Loader extends PluginBase implements Listener{
 			$task = $this->equip_players[$player->getName()]["task"];
 			$task->getHandler()->cancel();
 			unset($this->equip_players[$player->getName()]);
-			$player->sendMessage($this->getSetting()->get("turn-off"));
+			$player->sendMessage(§l§b»§r §aSuccessfully unequipped wings));
 		}
 	}
 }
