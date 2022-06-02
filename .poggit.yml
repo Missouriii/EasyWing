@@ -8,5 +8,5 @@ projects:
     path: "" 
     libs:
     - src: jojoe77777/FormAPI/LibFormAPI
-      version: ^1.0.0
+      version: ^2.1.0
 ...
