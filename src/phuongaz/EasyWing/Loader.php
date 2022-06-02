@@ -27,7 +27,6 @@ Class Loader extends PluginBase implements Listener{
 
 	public function onEnable() :void{
 		$this->saveDefaultConfig();
-		$this->saveResource("wings/example.yml");
 		$this->getServer()->getCommandMap()->register("EasyWing", new WingsCommand());
 		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->config = new Config($this->getDataFolder() . "/config.yml", Config::YAML);
@@ -63,7 +62,7 @@ Class Loader extends PluginBase implements Listener{
 
 	public function equipWing(Player $player, CustomWing $wing) :void {
 		if(!Utils::hasPermission($player, $wing->getName())){
-			$player->sendMessage("You don't have permission");
+			$player->sendMessage("§l§b»§r §cYou haven't unlocked this wing yet!");
 			return;
 		}
 		$tickUpdate = $this->getSetting()->get("tick-update");
