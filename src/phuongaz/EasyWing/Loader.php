@@ -91,7 +91,7 @@ Class Loader extends PluginBase implements Listener{
 			$task = $this->equip_players[$player->getName()]["task"];
 			$task->getHandler()->cancel();
 			unset($this->equip_players[$player->getName()]);
-			$player->sendMessage("§l§b»§r §aSuccessfully unequipped wings"));
+			$player->sendMessage("§l§b»§r §aSuccessfully unequipped wings");
 		}
 	}
 }
